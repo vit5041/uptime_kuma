@@ -31,20 +31,23 @@ Search for "Uptime Kuma" in the HACS store. If you don't see it there, you can [
 After installation, setup the integration via the web UI like any other integration. When prompted, provide the following:
 
 ### HTTPS Connections:
-- Your UptimeKuma instance url (i.e. https://myuptimekuma.mydomain.com)
-- Port (Generally 443 if running behind reverse proxy)
-- Your uptimekuma credentials
-  - NOTE: If you have issues connecting, try creating an uptimekuma API key and using that with NO username for the credentials. If you are still having issues,make sure you can successfully connect to `http(s)://your_uptimekuma.url/metrics`
-- Verify SSL (Generally checked)
+- URL: Your UptimeKuma instance url (i.e. https://myuptimekuma.mydomain.com)
+- Port: (Generally 443 if running behind reverse proxy)
+- User: Your uptimekuma Username
+- Password: API Key (UptimeKuma > Settings > API Keys)
+- Verify SSL: (Generally checked)
 
 ### HTTP Connections:
-- Your UptimeKuma instance url : http://xxx.xxx.xxx.xxx
+- URL: Your UptimeKuma instance url (i.e. http://xxx.xxx.xxx.xxx)
 - Port : 3001
-- Your uptimekuma credentials:
-    - user: (i.e admin)
-    - pass : API password from within UptimeKuma 
+- User: Your uptimekuma Username
+- Password: API Key (UptimeKuma > Settings > API Keys)
 - Verify SSL: Unchecked
 
+### Troubleshooting
+
+If you are having issues connecting, make sure you can successfully connect to `http(s)://your_uptimekuma.url/metrics` using a private browser window.
+There have also been reports of non-ssl instances not being entirely reliable. It is recommended to use a valid SSL certificate. This is made easy by projects like [NGINXProxyManager](https://nginxproxymanager.com/), [Traefik](https://doc.traefik.io/traefik/), [Caddy](https://caddyserver.com/), and others.
 
 ## Contributions
 
