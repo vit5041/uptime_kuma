@@ -110,6 +110,7 @@ class UptimeKumaSummarySensor(SensorEntity):
         self.downs=0
         self.pendings=0
         self.ukstate=0.0
+        self._attr_unique_id = ("uptkid_"+sensor_name_from_url(coordinator.api._base_url))
         self.entity_id = ("sensor.uptimekuma_"+sensor_name_from_url(coordinator.api._base_url))
 
         self._attr_extra_state_attributes = {
